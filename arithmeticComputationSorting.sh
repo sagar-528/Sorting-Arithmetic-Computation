@@ -1,6 +1,5 @@
 #!/bin/bash -x
 
-#->Problem Statement:
 #->Author: Sagar Gupta 
 #->Date: Mar 2020 
 
