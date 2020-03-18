@@ -9,4 +9,5 @@ read -p "Enter third number :" c
 
 echo "scale=3; $a+$b*$c" | bc
 echo "scale=3; $a*$b+$c" | bc
+echo "scale=3; $c+$a/$b" | bc
 
