@@ -8,3 +8,5 @@ read -p "Enter second number :" b
 read -p "Enter third number :" c
 
 echo "scale=3; $a+$b*$c" | bc
+echo "scale=3; $a*$b+$c" | bc
+
