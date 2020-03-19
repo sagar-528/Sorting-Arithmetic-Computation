@@ -3,12 +3,22 @@
 #->Author: Sagar Gupta 
 #->Date: Mar 2020 
 
-read -p "Enter first number :" a
-read -p "Enter second number :" b
-read -p "Enter third number :" c
+#reading the value
+read -p "Enter first number :" number1
+read -p "Enter second number :" number2
+read -p "Enter third number :" number3
 
-echo "scale=3; $a+$b*$c" | bc
-echo "scale=3; $a*$b+$c" | bc
-echo "scale=3; $c+$a/$b" | bc
-echo "scale=3; $a%$b+$c" | bc
+#computing problems
+result1=`echo "scale=3; $number1+$number2*$number3" | bc`
+result2=`echo "scale=3; $number1*$number2+$number3" | bc`
+result3=`echo "scale=3; $number3+$number1/$number2" | bc`
+result4=`echo "scale=3; $number1%$number2+$number3" | bc`
+
+#storing results in dictionary
+arithmeticDictionary[1]=$result1
+arithmeticDictionary[2]=$result2
+arithmeticDictionary[3]=$result3
+arithmeticDictionary[4]=$result4
+
+
 
