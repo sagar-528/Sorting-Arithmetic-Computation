@@ -42,3 +42,20 @@ do
 done
 
 echo "${array[@]}"
+
+#result in ascending order
+echo "Sorted array in ascending order"
+for counter1 in ${!array[@]}
+do
+   for counter2 in ${!array[@]}
+   do
+      if (( `echo "${array[$counter1]} < ${array[$counter2]}"| bc -q` == 1 ))    #-q is Quiet from bc. 
+      then
+         temp="${array[$counter1]}"
+         array[$counter1]="${array[$counter2]}"
+         array[$counter2]=$temp
+      fi
+   done
+done
+
+echo "${array[@]}"
