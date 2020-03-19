@@ -20,5 +20,9 @@ arithmeticDictionary[2]=$result2
 arithmeticDictionary[3]=$result3
 arithmeticDictionary[4]=$result4
 
-
+#Dictionary into array
+for value in  ${!arithmeticDictionary[@]}
+do 
+	array[value]="${arithmeticDictionary[$value]}"
+done
 
